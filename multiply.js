@@ -15,3 +15,5 @@ const multiply = (x) => (y) => {
 }
 
 console.log(' 5 x 9 = ', multiply(5)(9));
+
+module.exports = multiply;
