@@ -1,12 +1,14 @@
+const add = (x) => (y) => x + y;
 const decrement = (x) => x -= 1;
 const mutiply = (x) => (y) => {
     let result = 0;
-    
+    let addX = add(x);
+
     while(y > 0) {
-        result += x;
+        result = addX(result);
         y = decrement(y);
     }
-    
+
     return result;
 }
 
