@@ -27,3 +27,5 @@ const pow = (x) => (y) => {
 console.log('2 ^ 3', pow(2)(3));
 console.log('4 ^ 5', pow(4)(5));
 console.log('6 ^ 7', pow(6)(7));
+
+module.exports = pow;
