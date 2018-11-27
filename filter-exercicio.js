@@ -32,7 +32,7 @@ const peoples = [
 const pattern = ( func ) => ( ini, final ) => func ( ini, final );
 const filterPattern = ( ini, final ) => element => element.idade >= ini && element.idade <= final;
 const getPeoplesByBetweenYears = ( ini, final ) => ( peoples ) =>
-	peoples.filter( filterPattern( ini, final) );
+	peoples.filter( pattern(filterPattern( ini, final) ) );
 
 const getPeopleBetween18and50years = getPeoplesByBetweenYears(18, 50);
 
