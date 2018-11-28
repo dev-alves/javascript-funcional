@@ -29,8 +29,8 @@ const peoples = [
 ];
 
 
-const pattern = ( func ) => ( ini, final ) => func ( ini, final );
-const filterPattern = ( ini, final ) => element => element.idade >= ini && element.idade <= final;
+const pattern = ( func ) => peoples => func ( peoples.idade );
+const filterPattern = ( ini, final ) => element => element >= ini && element <= final;
 const getPeoplesByBetweenYears = ( ini, final ) => ( peoples ) =>
 	peoples.filter( pattern(filterPattern( ini, final) ) );
 
